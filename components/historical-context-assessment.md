@@ -7,9 +7,9 @@
     - [HCA Team](#hca-team)
     - [Implementation Triggers](#implementation-triggers)
   - [2. Historical Context Assessment Questionnaire](#2-historical-context-assessment-questionnaire)
-    - [1. Domain \& Historical Research](#1-domain--historical-research)
-    - [2. Data \& Representation Audit](#2-data--representation-audit)
-    - [3. Technical Mechanism \& Pipeline Audit](#3-technical-mechanism--pipeline-audit)
+    - [1. Domain & Historical Research](#1-domain--historical-research)
+    - [2. Data & Representation Audit](#2-data--representation-audit)
+    - [3. Technical Mechanism & Pipeline Audit](#3-technical-mechanism--pipeline-audit)
     - [4. Multi-Framework Analysis](#4-multi-framework-analysis)
   - [3. Historical Context Risk Classification Matrix](#3-historical-context-risk-classification-matrix)
     - [Matrix Scoring Components](#matrix-scoring-components)
@@ -20,43 +20,43 @@
 
 ## 1. Purpose
 
-The Historical Context Assessment Tool (HCAT) is a governance framework designed for engineering teams to conduct rigorous historical analysis following scientific fairness best practices. The primary objectives are to:
+The Historical Context Assessment Tool (HCAT) is a governance framework designed for engineering teams to conduct rigorous historical analysis following scientific fairness best practices. The primary goals are:
 * Uncover specific historical patterns of discrimination within a project’s domain.
 * Translate qualitative histories into technical risk definitions (e.g., identifying "Zip Code" as a proxy for redlining).
 * Prioritize mitigation efforts using a quantitative risk matrix.
-* Prevent "Fairness Debt": Just as technical debt accumulates when choosing "quick" code over "right" code, fairness debt accumulates when models are built on social data without understanding the systemic biases that created that data.
+* Prevent fairness debt: as technical debt accumulates when choosing quick fixes over robust solutions, fairness debt accumulates when models are built on social data without understanding systemic harms.
 
 ### HCA Team
-* Technical Teams (Data Scientists & Engineers): Responsible for executing the assessment and mapping findings to features.
+* Technical Teams (Data Scientists & Engineers): Execute the assessment and map findings to features.
 * Domain Experts: Provide historical and sociological context regarding industry-specific discrimination.
-* Stakeholders: Individuals or groups potentially affected by the system’s outcomes who provide "lived experience" input.
-* Leadership (Staff Engineers/AI Governance): Review the Risk Matrix and provide final sign-off on the mitigation strategy.
+* Stakeholders: Individuals or groups potentially affected by the system’s outcomes who provide lived-experience input.
+* Leadership (AI Governance): Review the risk matrix and provide final sign-off on mitigation strategies.
 
 ### Implementation Triggers
-The HCAT will serve as the first component of the [**AI Fairness Audit Playbook**][playbook], ensuring that fairness assessments address root causes rather than merely symptoms of bias. It must be initiated at specific entry points in the project lifecycle to be effective:
+The HCAT serves as the first component of the AI Fairness Audit Playbook, ensuring that fairness assessments address root causes rather than symptoms of bias. Typical triggers include:
   1. Lifecycle & Scope Triggers
-      * New AI Project Scoping: Initiating any project that automates decisions previously handled by human or legacy systems.
-      * Success Metric Definition: During the "Problem Formulation" stage, when defining what constitutes a "successful" outcome or an "ideal" candidate.
+      * New AI Project Scoping: Initiating any project that automates decisions previously handled by humans or legacy systems.
+      * Success Metric Definition: During problem formulation, when defining what constitutes a successful outcome.
   2. High-Risk Domain Triggers
-      * Regulated Sectors: Operations in domains with documented systemic bias, including Finance (Lending/Credit), Healthcare, Hiring, Education, and Criminal Justice.
-      * Power Asymmetry: Applications where the technology functions as a gatekeeper for essential resources or social mobility.
+      * Regulated Sectors: Operations in domains with documented systemic bias, including finance (lending/credit), healthcare, hiring, education, and criminal justice.
+      * Power Asymmetry: Applications where the technology functions as a gatekeeper for essential resources.
   3. Data & Classification Triggers
-      * Social Classifications: Systems relying on categories defined by protected attributes rather than objective physics (e.g., "Creditworthiness," "Risk Profile," or gender/racial proxies).
-      * Historical Feedback Loops: When the model trains on data where the "ground truth" was created by previous human biases (e.g., historical loan denial rates).
+      * Social Classifications: Systems relying on categories defined by protected attributes rather than objective measures.
+      * Historical Feedback Loops: When models train on data where the ground truth was shaped by prior human decisions.
 
-Before Metric Selection: The HCAT must be completed before choosing a mathematical fairness definition (e.g., choosing between Demographic Parity or Equal Opportunity), as the history dictates which metric is most protective.
+HCAT must be completed before choosing a mathematical fairness definition (for example, demographic parity or equal opportunity), as the historical analysis informs which definitions are appropriate.
 
 ---
 
 ## 2. Historical Context Assessment Questionnaire
-*To be completed during the **Scoping Cycle***.
+*To be completed during the scoping cycle.*
 
 ### 1. Domain & Historical Research
 
 | # | Audit Question | Required Artifact |
 | :-- | :--- | :--- |
 | 1.1 | **Application Domain:** What specific domain (e.g., lending) is this for? | Domain Identification |
-| 1.2 | **Success Definition:** Does our "success" metric (e.g., "predicting arrest") embed historical bias? | Metric Critique |
+| 1.2 | **Success Definition:** Does our success metric embed historical bias? | Metric Critique |
 | 1.3 | **History of Harm:** What documented practices (e.g., redlining) have marginalized groups here? | Historical Inventory |
 | 1.4 | **Technological Continuity:** How have previous systems in this domain reinforced hierarchies? | Continuity Analysis |
 
@@ -66,9 +66,9 @@ Before Metric Selection: The HCAT must be completed before choosing a mathematic
 
 | # | Audit Question | Required Artifact |
 | :-- | :--- | :--- |
-| 2.1 | **Source Context:** What social/political contexts shaped the collection of this data? | Provenance Log |
-| 2.2 | **Classification Politics:** Are categories (e.g., race, credit) treated as objective vs. socially constructed? | Categorical Analysis |
-| 2.3 | **Proxy Forensic:** Which features (e.g., Zip code) correlate with protected attributes? | Statistical Proxy Report |
+| 2.1 | **Source Context:** What social/political contexts shaped data collection? | Provenance Log |
+| 2.2 | **Classification Politics:** Are categories (e.g., race, credit) treated as objective or socially constructed? | Categorical Analysis |
+| 2.3 | **Proxy Forensic:** Which features (e.g., zip code) correlate with protected attributes? | Statistical Proxy Report |
 | 2.4 | **Demographic Variance:** How do dataset demographics compare to real-world benchmarks? | Variance Report |
 | 2.5 | **Data Deserts:** Are there gaps where information is sparse due to historical neglect? | Representation Gap Report |
 
@@ -81,7 +81,7 @@ Before Metric Selection: The HCAT must be completed before choosing a mathematic
 | 3.1 | **Mechanism Analysis:** Through what path (label bias, noise) might history manifest in code? | Mechanism Report |
 | 3.2 | **Vulnerability Heatmap:** Which pipeline components are most vulnerable to these patterns? | Vulnerability Map |
 | 3.3 | **Codification:** How are social categories encoded, and what nuances are lost? | Encoding Log |
-| 3.4 | **Feedback Loops:** Does the prediction influence future "Ground Truth" data? | Feedback Loop Diagram |
+| 3.4 | **Feedback Loops:** Does the prediction influence future ground-truth data? | Feedback Loop Diagram |
 | 3.5 | **Intersectionality:** Does the data identify unique risks at demographic intersections? | Intersectional Audit |
 
 ---
@@ -89,120 +89,87 @@ Before Metric Selection: The HCAT must be completed before choosing a mathematic
 ### 4. Multi-Framework Analysis
 
 Evaluate the project through these three lenses:
-1. **Consequentialist:** Impact on the many (total outcome).
-2. **Deontological:** Rule-based fairness (adherence to rights).
-3. **Virtue Ethics:** Alignment with company/societal values.
+
+1. **Consequentialist:** Impact on aggregate outcomes.
+2. **Deontological:** Rule-based fairness and rights adherence.
+3. **Virtue Ethics:** Alignment with organizational and societal values.
 
 **The Rationale Log**
+
 | # | Audit Question |
 | :-- | :--- |
-| 4.1 | **Value Alignment:** Which framework aligns with our primary stakeholders?
-| 4.2 | **Conflict Resolution:** If Frameworks A and B suggest different paths, which did we choose and why?
-| 4.3 | **Revisit Trigger:** What data shift would require us to re-evaluate these trade-offs?
+| 4.1 | Which ethical framework aligns with primary stakeholders? |
+| 4.2 | If frameworks conflict, which did we choose and why? |
+| 4.3 | What data shift would require re-evaluation of these trade-offs? |
 
 ---
 
 ## 3. Historical Context Risk Classification Matrix
 
 ### Matrix Scoring Components
-* **Historical Pattern:** Specific documented pattern of discrimination with historical evidence.  
-* **Severity:** Impact of this bias if perpetuated (High - 3 / Medium - 2 / Low - 1):
-   * **High:** Directly impacts fundamental rights or life outcomes.  
-   * **Medium:** Creates significant disparities in opportunities or resources.  
-   * **Low:** Creates differential experiences but with limited material impact.
-* **Likelihood:** Probability of this pattern manifesting in AI systems (High - 3 / Medium - 2 / Low - 1):
-    * **High:** Pattern frequently appears in similar systems.  
-    * **Medium:** Pattern occasionally appears in similar systems.  
-    * **Low:** Pattern rarely appears in similar systems.
-* **Relevance:** Applicability to the specific AI system being developed (High - 3 / Medium - 2 / Low - 1):
-    * **High:** Direct applicability to system's domain/purpose.
-    * **Medium:** Partial applicability to certain system components.
-    * **Low:** Limited applicability but potential for manifestation.
-* **Priority Score:** Calculated as Severity + Likelihood + Relevance:
-    * **7-9: Critical priority** - Requires immediate mitigation.
-    * **5-6: High priority** - Requires mitigation if the launch is successful.
-    * **3-4: Medium priority** - Requires monitoring after successful launch.
-    * **1-2: Low priority** - No action needed.
+* **Historical Pattern:** Specific documented pattern of discrimination with historical evidence.
+* **Severity:** Impact of this bias if perpetuated (High - 3 / Medium - 2 / Low - 1).
+* **Likelihood:** Probability of this pattern manifesting in AI systems (High - 3 / Medium - 2 / Low - 1).
+* **Relevance:** Applicability to the specific AI system being developed (High - 3 / Medium - 2 / Low - 1).
+* **Priority Score:** Calculated as Severity + Likelihood + Relevance.
 
-
-### Risk Classification Example
-| Historical Pattern | Severity | Likelihood | Relevance | Priority Score |
-| :--- | :---: | :---: | :---: | :--- |
-| **Redlining practices** (Lending) | 3 | 3 | 3 | **9 (Critical)** |
-| **Gender bias** (Professional Eval) | 3 | 2 | 2 | **7 (High)** |
-| **Racial disparities** (Medical Diag) | 3 | 2 | 1 | **6 (Medium)** |
-| **Age discrimination** (Advertising) | 2 | 3 | 1 | **6 (Medium)** |
-| **Linguistic bias** (NLP/LLM) | 2 | 2 | 1 | **5 (Medium)** |
-| **Religious discrimination** (Social) | 2 | 1 | 1 | **4 (Low)** |
+### Priority Score Interpretation
+* 7–9: Critical — immediate mitigation required.
+* 5–6: High — mitigation required if launch proceeds.
+* 3–4: Medium — monitor post-launch.
+* 1–2: Low — no immediate action.
 
 ---
 
 ## 4. Implementation Guides
 
-### Quick Start Guide - For Experienced Users
+### Quick Start Guide — For Experienced Users
 
 **Prerequisites:** Familiarity with AI fairness concepts and access to domain experts.
 
 **Rapid Assessment Checklist:**
-- [ ] **Step 2:** Scan data for obvious proxy variables and demographic imbalances
-- [ ] **Step 1:** Identify domain and review historical harms (focus on 2-3 key patterns)
-- [ ] **Step 3:** Flag high-risk pipeline components
-- [ ] **Step 4:** Score top 3 risks using priority matrix
-- [ ] **Step 5:** Document findings and escalate critical issues.
+- [ ] Scan data for obvious proxy variables and demographic imbalances.
+- [ ] Identify domain and review historical harms (focus on 2–3 key patterns).
+- [ ] Flag high-risk pipeline components.
+- [ ] Score top risks using the priority matrix.
+- [ ] Document findings and escalate critical issues.
 
-**Key Decision Points:**
-- If historical patterns are obvious → Proceed to risk scoring
-- If domain is unfamiliar → Switch to Detailed Walkthrough
-- If high-priority risks found → Immediate mitigation planning
+**Deliverables:** Risk matrix with 3+ identified patterns, priority scores, and mitigation recommendations. Feed results into FDST for metric selection.
 
-**Deliverables:** [Risk matrix](#3-historical-context-risk-classification-matrix) with 3+ identified patterns, priority scores, and mitigation recommendations. Use Documentation [hcat-template]
-**Crucial:** Feed these results into the [**Fairness Definition Selection**][Fairness Definition Selection Tool] process (Component 2).
-
-### Detailed Walkthrough - For New Teams
-
-**Step-by-Step Process:**
+### Detailed Walkthrough — For New Teams
 
 **Step 1: Preparation**
-- Assemble cross-functional team (data scientists, domain experts, stakeholders)
-- Gather project documentation and data samples
-- Review component overview and success criteria
+- Assemble a cross-functional team (data scientists, domain experts, stakeholders).
+- Gather project documentation and data samples.
+- Review component overview and success criteria.
 
 **Step 2: Domain Research**
-- Research industry-specific discrimination patterns
-- Identify relevant legal cases and regulatory requirements
-- Document historical context and current systemic issues
-- Note stakeholder groups and potential impact areas
+- Research industry-specific discrimination patterns.
+- Identify relevant legal cases and regulatory requirements.
+- Document historical context and current systemic issues.
 
-**Step 3: [Questionnaire](#2-historical-context-assessment-questionnaire) Completion**
-- Work through each section systematically:
-  - Section 1: Domain & Historical Research (5 min)
-  - Section 2: Data & Representation Audit (7 min)
-  - Section 3: Technical Mechanism & Pipeline Audit (8 min)
-- Document specific examples and evidence for each question
-- Flag information gaps requiring further research
+**Step 3: Questionnaire Completion**
+- Complete Sections 1–3 with evidence and examples.
+- Flag information gaps for further research.
 
-**Step 4: [Risk Classification](#3-historical-context-risk-classification-matrix)**
-- Review identified patterns against scoring criteria
-- Calculate priority scores for each risk
-- Categorize risks by priority level
-- Identify immediate mitigation needs
+**Step 4: Risk Classification**
+- Review identified patterns against scoring criteria and calculate priority scores.
 
 **Step 5: Documentation & Integration**
-- Compile findings into structured assessment
-- Prepare executive summary with key recommendations using [hcat]
-- **Crucial:** Feed these results into the [**Fairness Definition Selection**][Fairness Definition Selection Tool] process (Component 2).
+- Compile findings into a structured assessment and prepare an executive summary.
+- Feed results into FDST for metric selection.
 
 **Success Checklist:**
-- [ ] All questionnaire sections completed with evidence
-- [ ] Risk matrix populated with priority scores
-- [ ] Key findings documented with actionable recommendations
-- [ ] Integration plan for next assessment phase prepared
+- [ ] All questionnaire sections completed with evidence.
+- [ ] Risk matrix populated with priority scores.
+- [ ] Key findings documented with actionable recommendations.
+- [ ] Integration plan for the next assessment phase prepared.
 
 **Common Pitfalls to Avoid:**
-- Skipping domain research (leads to incomplete analysis)
-- Treating categories as objective (misses social construction)
-- Focusing only on technical bias (ignores systemic context)
-- Not involving diverse stakeholders (limits perspective)
+- Skipping domain research.
+- Treating categories as purely objective.
+- Focusing only on technical bias without historical context.
+- Not involving diverse stakeholders.
 
 [playbook]: ../ai-fairness-audit-playbook.md
 [hcat-template]: /templates/hcat.md

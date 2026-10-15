@@ -1,137 +1,123 @@
-# Fairness Audit Playbook: Historical Context Assessment Tool(Part 1)
+# Fairness Audit Playbook: Historical Context Assessment Template (HCAT)
 
 ## Project Overview
 
-| Field                           | Value                                                                 |
-|---------------------------------|-----------------------------------------------------------------------|
-| **Project Name/System Title**   | [Enter Name, e.g., "CreditSwift" Automated Loan Approval]             |
-| **Project Domain**              | [Enter Application Domain, e.g., Lending, Hiring, Healthcare, Criminal Justice] |
-| **Project Phase**               | Phase 1: Historical Context Assessment (Sprint 1)                     |
-| **Date of Assessment**          | [Enter Date]                                                          |
-| **Last Revision Date**          | [Enter Date]                                                          |
+| Field | Value |
+|---|---|
+| **Project Name/System Title** | [Enter project or system title] |
+| **Project Domain** | [Enter domain: Lending, Hiring, Healthcare, etc.] |
+| **Project Phase** | Phase 1: Historical Context Assessment |
+| **Date of Assessment** | [Enter date] |
+| **Last Revision Date** | [Enter date] |
 
 ## Assessment Context & Scope
 
-| Field                       | Value                                                                                                         |
-|-----------------------------|---------------------------------------------------------------------------------------------------------------|
-| **Assessment Trigger**      | [Describe the specific event, e.g., "New AI project scoping for automated decision system," "Post-incident bias review," or "Compliance requirement for high-risk AI under the EU AI Act"] |
-| **Deployment Region(s)**    | [List jurisdictions, e.g., European Union, USA, Global]                                                      |
-| **Primary System Objective**| [State what the system is trying to achieve and who the intended beneficiaries are]                            |
+| Field | Value |
+|---|---|
+| **Assessment Trigger** | [e.g., New AI project scoping, Post-incident bias review, Compliance requirement] |
+| **Deployment Region(s)** | [List jurisdictions, e.g., EU, USA, Global] |
+| **Primary System Objective** | [State objective and intended beneficiaries] |
 
 ## Decision-Making Team
 
-| Role                            | Name/Role                                       | Responsibilities/Notes                                         |
-|----------------------------------|-------------------------------------------------|----------------------------------------------------------------|
-| **Lead Assessor**               | [Name/Role, e.g., Senior AI Governance Specialist]         |                                                                |
-| **Domain Expert(s)**            | [Name/Role, e.g., Historical Lending Compliance Officer, Sociologist] |                                                                |
-| **Technical Lead**              | [Name/Role, e.g., ML Engineer, Data Scientist]              |                                                                |
-| **Stakeholder Representative(s)**| [Name/Role, e.g., Legal Counsel, Community Advocate, or User Representative] |                           |
+| Role | Name / Role | Responsibilities |
+|---|---|---|
+| **Lead Assessor** | [Anonymized — Lead Assessor] | Lead the assessment and compile findings |
+| **Domain Expert(s)** | [Anonymized — Domain Expert] | Provide domain context and historical knowledge |
+| **Technical Lead** | [Anonymized — Technical Lead] | Execute quantitative analyses and reproduce results |
+| **Stakeholder Representative(s)** | [Anonymized — Stakeholder Rep] | Provide stakeholder perspectives |
 
 ## Regulatory & Ethical Parameters
 
-| Parameter                      | Value                                                                                |
-|--------------------------------|-------------------------------------------------------------------------------------|
-| **Applicable Legal Frameworks**| [Identify mandatory standards, e.g., GDPR, EU AI Act, ECOA, Title VII]              |
-| **Identified Protected Attributes** | [List attributes requiring protection in this domain, e.g., Race, Gender, Age, Disability Status] |
-| **Primary Ethical Lens**       | [Select the guiding framework, e.g., Rawlsian Justice, Egalitarianism, or Virtue Ethics] |
+| Parameter | Value |
+|---|---|
+| **Applicable Legal Frameworks** | [e.g., GDPR, EU AI Act, ECOA, Title VII] |
+| **Identified Protected Attributes** | [List attributes: Race, Gender, Age, Disability, etc.] |
+| **Primary Ethical Lens** | [Select guiding framework: Consequentialist, Deontological, Virtue Ethics] |
 
 ---
 
 ## 1. Domain & Historical Research
 
-| #   | Required Artifact     | Audit Question                                                               | Response           |
-| :-- | :-------------------- | :--------------------------------------------------------------------------- | :----------------- |
-| 1.1 | Domain Identification | What specific domain (e.g., lending) is this for?                            | [Your Answer Here] |
-| 1.2 | Metric Critique       | Does our "success" metric (e.g., "predicting arrest") embed historical bias? | [Your Answer Here] |
-| 1.3 | Historical Inventory  | What documented practices (e.g., redlining) have marginalized groups here?   | [Your Answer Here] |
-| 1.4 | Continuity Analysis   | How have previous systems in this domain reinforced hierarchies?             | [Your Answer Here] |
+| # | Required Artifact | Audit Question | Response |
+|---|---:|---|---|
+| 1.1 | Domain Identification | What specific domain is this for? | [Your answer] |
+| 1.2 | Metric Critique | Does our success metric embed historical bias? | [Your answer] |
+| 1.3 | Historical Inventory | What documented practices have marginalized groups here? | [Your answer] |
+| 1.4 | Continuity Analysis | How have previous systems reinforced hierarchies? | [Your answer] |
 
-**Notes/Supporting Evidence:** [Add any additional notes, sources, or evidence here]
+**Notes / Evidence:** [Add sources and notes]
 
 ---
 
 ## 2. Data & Representation Audit
 
-| #   | Required Artifact         | Audit Question                                                                     | Response           |
-| :-- | :------------------------ | :--------------------------------------------------------------------------------- | :----------------- |
-| 2.1 | Provenance Log            | What social/political contexts shaped the collection of this data?                 | [Your Answer Here] |
-| 2.2 | Categorical Analysis      | Are categories (e.g., race, credit) treated as objective vs. socially constructed? | [Your Answer Here] |
-| 2.3 | Statistical Proxy Report  | Which features (e.g., Zip code) correlate with protected attributes?               | [Your Answer Here] |
-| 2.4 | Variance Report           | How do dataset demographics compare to real-world benchmarks?                      | [Your Answer Here] |
-| 2.5 | Representation Gap Report | Are there gaps where information is sparse due to historical neglect?              | [Your Answer Here] |
-
-**Notes/Supporting Evidence:** [Add any additional notes, sources, or evidence here]
+| # | Required Artifact | Audit Question | Response |
+|---|---:|---|---|
+| 2.1 | Provenance Log | What contexts shaped data collection? | [Your answer] |
+| 2.2 | Categorical Analysis | Are categories treated as objective or socially constructed? | [Your answer] |
+| 2.3 | Statistical Proxy Report | Which features correlate with protected attributes? | [Your answer] |
+| 2.4 | Variance Report | How do dataset demographics compare to benchmarks? | [Your answer] |
+| 2.5 | Representation Gap Report | Are there gaps due to historical neglect? | [Your answer] |
 
 ---
 
 ## 3. Technical Mechanism & Pipeline Audit
 
-| #   | Required Artifact     | Audit Question                                                        | Response           |
-| :-- | :-------------------- | :-------------------------------------------------------------------- | :----------------- |
-| 3.1 | Mechanism Report      | Through what path (label bias, noise) might history manifest in code? | [Your Answer Here] |
-| 3.2 | Vulnerability Map     | Which pipeline components are most vulnerable to these patterns?      | [Your Answer Here] |
-| 3.3 | Encoding Log          | How are social categories encoded, and what nuances are lost?         | [Your Answer Here] |
-| 3.4 | Feedback Loop Diagram | Does the prediction influence future "Ground Truth" data?             | [Your Answer Here] |
-| 3.5 | Intersectional Audit  | Does the data identify unique risks at demographic intersections?     | [Your Answer Here] |
-
-**Notes/Supporting Evidence:** [Add any additional notes, sources, or evidence here]
+| # | Required Artifact | Audit Question | Response |
+|---|---:|---|---|
+| 3.1 | Mechanism Report | Through what path might history manifest in code? | [Your answer] |
+| 3.2 | Vulnerability Map | Which pipeline components are most vulnerable? | [Your answer] |
+| 3.3 | Encoding Log | How are social categories encoded and what nuances are lost? | [Your answer] |
+| 3.4 | Feedback Loop Diagram | Does the prediction influence future ground-truth data? | [Your answer] |
+| 3.5 | Intersectional Audit | Does the data identify risks at demographic intersections? | [Your answer] |
 
 ---
 
 ## 4. Multi-Framework Analysis
-Evaluate the project through these three lenses:
 
-1. **Consequentialist:** Impact on the many (total outcome).
-   - [Your Analysis Here]
+1. **Consequentialist:** [Your analysis]
+2. **Deontological:** [Your analysis]
+3. **Virtue Ethics:** [Your analysis]
 
-2. **Deontological:** Rule-based fairness (adherence to rights).
-   - [Your Analysis Here]
+**Rationale Log**
 
-3. **Virtue Ethics:** Alignment with company/societal values.
-   - [Your Analysis Here]
-
-### The Rationale Log
-
-| #   | Audit Question                                                              | Response           |
-| :-- | :-------------------------------------------------------------------------- | :----------------- |
-| 4.1 | Which framework aligns with our primary stakeholders?                       | [Your Answer Here] |
-| 4.2 | If Frameworks A and B suggest different paths, which did we choose and why? | [Your Answer Here] |
-| 4.3 | What data shift would require us to re-evaluate these trade-offs?           | [Your Answer Here] |
-
-**Notes/Supporting Evidence:** [Add any additional notes, sources, or evidence here]
+| # | Audit Question | Response |
+|---|---|---|
+| 4.1 | Which framework aligns with stakeholders? | [Your answer] |
+| 4.2 | If frameworks conflict, which did we choose and why? | [Your answer] |
+| 4.3 | What data shift would require re-evaluation? | [Your answer] |
 
 ---
 
 ## 5. Risk Classification Matrix
 
-Use the following matrix to classify identified risks. Refer to the component guide for scoring guidelines.
+| Historical Pattern | Severity (1-3) | Likelihood (1-3) | Relevance (1-3) | Priority Score | Notes |
+|---|---:|---:|---:|---:|---|
+| [Pattern 1] | [ ] | [ ] | [ ] | [ ] | [Details] |
+| [Pattern 2] | [ ] | [ ] | [ ] | [ ] | [Details] |
+| [Pattern 3] | [ ] | [ ] | [ ] | [ ] | [Details] |
 
-| Historical Pattern | Severity (1-3) | Likelihood (1-3) | Relevance (1-3) | Priority Score | Notes     |
-| :----------------- | :------------: | :--------------: | :-------------: | :------------: | :-------- |
-| [Pattern 1]        |    [Score]     |     [Score]      |     [Score]     |    [Total]     | [Details] |
-| [Pattern 2]        |    [Score]     |     [Score]      |     [Score]     |    [Total]     | [Details] |
-| [Pattern 3]        |    [Score]     |     [Score]      |     [Score]     |    [Total]     | [Details] |
-
-**Priority Levels:**
-- 7-9: Critical priority - Requires immediate mitigation
-- 5-6: High priority - Requires mitigation if launch is successful
-- 3-4: Medium priority - Requires monitoring after launch
-- 1-2: Low priority - No action needed
+Priority levels:
+- 7–9: Critical — immediate mitigation
+- 5–6: High — mitigation required if launching
+- 3–4: Medium — monitor post-launch
+- 1–2: Low — no action required
 
 ---
 
 ## 6. Recommendations & Next Steps
 
-**Key Findings:** [Summarize the most important insights from this assessment]
+**Key Findings:** [Summarize insights]
 
-**Recommended Actions:** [List specific mitigation strategies or next steps]
+**Recommended Actions:** [List mitigation strategies]
 
-**Integration with Next Component:** [How will this inform the Fairness Definition Selection Tool?]
+**Integration with Next Component:** How this informs FDST
 
 **Sign-off:**
-- Assessor: ___________________________ Date: _______________
-- Reviewer: ___________________________ Date: _______________
+- Assessor: [Anonymized] Date: __/__/____
+- Reviewer: [Anonymized] Date: __/__/____
 
 ---
 
-*This template is based on the Historical Context Assessment Tool (HCAT) from the AI Fairness Audit Playbook. For detailed guidance, refer to the component documentation.*
+*This template is based on the HCAT component of the AI Fairness Audit Playbook.*
